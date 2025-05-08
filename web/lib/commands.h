@@ -1,0 +1,61 @@
+#pragma once
+
+
+enum class InCommand {
+    RENAME_USER          = 0,
+    CREATE_PERSONAL_CHAT = 1,
+    CREATE_OPEN_GROUP    = 2,
+    CREATE_CLOSE_GROUP   = 3,
+    DELETE_CHAT          = 4,
+    ADD_PARTICIPANT      = 5,
+    REMOVE_PARTICIPANT   = 6,
+    SEND_MESSAGE         = 7,
+    EDIT_MESSAGE         = 8,
+    REMOVE_MESSAGE       = 9,
+    GET_HISTORY          = 10,
+    LIST_USERS           = 11,
+    SIGN_UP              = 12,
+    SIGN_IN              = 13,
+    SIGN_OUT             = 14,
+    LIST_CHATS           = 15,
+    LIST_PARTICIPANTS    = 16,
+};
+
+enum class OutCommand {
+    ERRORR              = -2,
+    USER_CREATED        = -1,
+    USER_RENAMED        = 0,
+    CHAT_CREATED        = 1,
+    CHAT_DELETED        = 2,
+    PARTICIPANT_ADDED   = 3,
+    PARTICIPANT_REMOVED = 4,
+    MESSAGE_SENT        = 5,
+    MESSAGE_EDITED      = 6,
+    MESSAGE_REMOVED     = 7,
+    HISTORY             = 8,
+    USERS_LIST          = 9,
+    SIGN_UP_SUCCESS     = 10,
+    SIGN_UP_FAIL        = 11,
+    SIGN_IN_SUCCESS     = 12,
+    SIGN_IN_FAIL        = 13,
+    SIGN_OUT_SUCCESS    = 14,
+    SIGN_OUT_FAIL       = 15,
+    CHATS_LIST          = 16,
+    PARTICIPANTS_LIST   = 17,
+};
+
+enum class ErrorCode {
+    UNKNOWN_COMMAND          = 0,
+    INCORRECT_FORMAT         = 1,
+    ERROR_USER_RENAME        = 2,
+    ERROR_CHAT_CREATE        = 3,
+    ERROR_CHAT_DELETE        = 4,
+    ERROR_PARTICIPANT_ADD    = 5,
+    ERROR_PARTICIPANT_REMOVE = 6,
+    ERROR_SEND_MESSAGE       = 7,
+    ERROR_EDIT_MESSAGE       = 8,
+    ERROR_REMOVE_MESSAGE     = 9,
+    ERROR_USER_NOT_FOUND     = 10,
+    ERROR_CHAT_NOT_FOUND     = 11,
+    ERROR_MESSAGE_NOT_FOUND  = 12,
+};
